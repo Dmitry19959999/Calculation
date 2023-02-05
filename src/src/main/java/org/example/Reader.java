@@ -1,7 +1,9 @@
 package org.example;
 
 import java.util.Scanner;
-
+/*
+* Класс для вычитки из контроллера
+* */
 public class Reader {
     public String read() {
         String line = null;

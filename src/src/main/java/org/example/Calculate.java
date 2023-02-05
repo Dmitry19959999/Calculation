@@ -2,6 +2,9 @@ package org.example;
 
 import org.example.exception.FormatExeption;
 
+/*
+* Класс производит вычисления исходя из делиметра
+* */
 public class Calculate {
     private int result;
     public int getCalculation(int number1, int number2, char delimeter)  {
