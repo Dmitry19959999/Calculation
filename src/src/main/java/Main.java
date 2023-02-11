@@ -1,26 +1,26 @@
 import java.util.Scanner;
 
-class Calc {
+class Main {
 
     public static void main(String[] args) throws Exception {
         while (true) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Введите два числа: ");
             String expression = scanner.nextLine();//считываем наше выражение
-            System.out.println(parse(expression));
+            System.out.println(calc(expression));
         }
     }
-    public static String parse(String expression) throws Exception {// метод parse
+    public static String calc(String input) throws Exception {// метод parse
         int num1;
         int num2;
         String oper;
         String result;
         boolean isRoman;
-        String[] operands = expression.split("[+\\-*/]"); // делаем деление по арифметическим знакам
+        String[] operands = input.split("[+\\-*/]"); // делаем деление по арифметическим знакам
         if (operands.length < 2) throw new Exception("строка не является математической операцией");
-        oper = detectOperation(expression);
+        oper = detectOperation(input);
         if (operands.length > 2) throw new Exception("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
-        oper = detectOperation(expression);
+        oper = detectOperation(input);
         //если оба числа римские
         if (Roman.isRoman(operands[0]) && Roman.isRoman(operands[1])) {
             //конвертируем оба числа в арабские для вычисления действия
